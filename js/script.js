@@ -3,8 +3,7 @@ const proxy_url = "https://api.allorigins.win/get?url=" + encodeURIComponent(zen
 
 // Creates key based on today's date
 function getTodayKey() {
-    const today = new Date().toISOString().split("T")[0]; // t.ex. "2025-07-17"
-    return `quote-${today}`;
+    const today = new Date().toISOString().split("T")[0];
 }
 
 // Show Quote
@@ -41,7 +40,7 @@ async function getquote() {
         const data = await response.json();
         const quoteData = JSON.parse(data.contents)[0];
 
-    // Spara citatet för idag
+    // Save quote for today
     localStorage.setItem(todayKey, JSON.stringify(quoteData));
     displayQuote(quoteData);
     } catch (error) {
