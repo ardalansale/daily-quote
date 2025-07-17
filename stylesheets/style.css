@@ -1,0 +1,110 @@
+/* CSS Reset */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+img, picture, video, canvas, svg {
+    max-width: 100%;
+    display: block;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* --- */
+
+body {
+    background-color: rgb(31, 30, 44);
+    font-family: "Faculty Glyphic", sans-serif;}
+
+.quote-box {
+    background-color:rgb(255, 255, 255);
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgb(0, 0, 0, 0.15);
+}
+
+.quote-box h2 {
+    font-size: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    color: #505050;
+}
+
+.quote-box h2::after {
+    content: '';
+    width: 74px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: rgb(192, 192, 192);
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.quote-box blockquote {
+    font-size: 24px;
+    min-height: auto;
+}
+
+.quote-box blockquote::before, .quote-box blockquote::after {
+    content: ' '
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+.quote-box span::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+.author {
+    font-style: italic;
+    color: #ff0000;
+}
