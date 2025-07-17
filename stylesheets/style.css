@@ -71,7 +71,7 @@ body {
     width: 74px;
     height: 4px;
     border-radius: 4px;
-    background-color: rgb(192, 192, 192);
+    background-color: blue;
     position: absolute;
     bottom: -10px;
     left: 50%;
