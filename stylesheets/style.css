@@ -104,7 +104,6 @@ body {
     left: -30px;
 }
 
-.author {
+#author {
     font-style: italic;
-    color: #ff0000;
 }
