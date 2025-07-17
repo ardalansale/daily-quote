@@ -15,13 +15,14 @@ function capitalizeAfterNewlines(text) {
 function displayQuote(quoteData) {
     let cleanQuote = quoteData.q.trim().replace(/\s+/g, ' ');
     cleanQuote = capitalizeAfterNewlines(cleanQuote);
+    cleanQuote = cleanQuote.replace(/\n/g, '<br>');
 
     const cleanAuthor = quoteData.a.trim();
 
-    document.getElementById("quote").textContent = `"${cleanQuote}"`;
+    document.getElementById("quote").innerHTML = `"${cleanQuote}"`;
     document.getElementById("author").textContent = `${cleanAuthor}`;
 
-    console.log(`"${cleanQuote}" — ${cleanAuthor}`);
+    console.log(`"${quoteData.q}" — ${quoteData.a}`);
 }
 
 // Main Function
