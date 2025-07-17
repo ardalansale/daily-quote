@@ -8,8 +8,14 @@ function getTodayKey() {
 }
 
 // Show Quote
+function capitalizeAfterNewlines(text) {
+    return text.replace(/\n(.)/g, (match, char) => '\n' + char.toUpperCase());
+}
+
 function displayQuote(quoteData) {
-    const cleanQuote = quoteData.q.trim().replace(/\s+/g, ' ');
+    let cleanQuote = quoteData.q.trim().replace(/\s+/g, ' ');
+    cleanQuote = capitalizeAfterNewlines(cleanQuote);
+
     const cleanAuthor = quoteData.a.trim();
 
     document.getElementById("quote").textContent = `"${cleanQuote}"`;
